@@ -1,0 +1,8 @@
+@use "variables" as var;
+
+.Button {
+  margin: 16px;
+  .MuiButton-containedPrimary {
+    background-color: var.$col-primary;
+  }
+}
