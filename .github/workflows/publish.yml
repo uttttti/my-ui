@@ -20,7 +20,7 @@ jobs:
     
      # Nodeのバージョンを指定
      - name: setup node
-       uses: actions/setup-node@v1
+       uses: actions/setup-node@v2
        with:
          node-version: 14.x
          registry-url: https://npm.pkg.github.com
@@ -38,7 +38,6 @@ jobs:
        run: npx can-npm-publish --verbose && npm publish || echo "No need to publish"
        env:
          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-         GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           
      # バージョン情報を環境変数として設定
      - name: set version to env
@@ -46,7 +45,7 @@ jobs:
 
      # バージョン情報持つタグを付与する
      - name: add version tag
-       uses: pkgdeps/git-tag-action@v2
+       uses: pkgdeps/action-package-version-to-git-tag@v2
        with:
          version: ${{ env.VERSION }}
          github_token: ${{ secrets.GITHUB_TOKEN }}
