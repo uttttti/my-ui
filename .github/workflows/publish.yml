@@ -29,6 +29,10 @@ jobs:
      - name: install node_modules
        run: yarn install
 
+     # トランスパイルを実行
+     - name: build
+       run: npx tsc
+
      # パッケージとして公開する
      - name: publish
        run: npx can-npm-publish --verbose && npm publish || echo "No need to publish"
