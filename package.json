@@ -1,6 +1,6 @@
 {
   "name": "@uttttti/my-ui",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "GitHub Package sample",
   "types": "dist/main.d.ts",
   "publishConfig": {
