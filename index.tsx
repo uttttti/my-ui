@@ -1,3 +1,2 @@
-import * as MyUI from './src/';
-
-export { MyUI };
+import { App, Button } from './src/components';
+export { App, Button };
