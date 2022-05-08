@@ -2,6 +2,7 @@
 // import ReactDOM from 'react-dom/client';
 // import 'styles/index.scss'
 import App from 'components/App';
+import Button from 'components/Button';
 // import reportWebVitals from './reportWebVitals';
 
 // const root = ReactDOM.createRoot(
@@ -18,5 +19,4 @@ import App from 'components/App';
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // reportWebVitals();
 
-
-export { App };
+export { App, Button };
